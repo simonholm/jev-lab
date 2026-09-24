@@ -1,0 +1,10 @@
+{"id":"r01","text":"Decision: keep OPENROUTER_API_KEY as an environment override; store the optional local credential in a CLI-owned file with restrictive permissions."}
+{"id":"r02","text":"Implemented source-qualified inspect routing. The CLI now accepts codex:42 and git:42 without treating their numeric IDs as interchangeable."}
+{"id":"r03","text":"The ask command returned a 401. The environment key was stale; after removing that override, the stored credential worked in a fresh run."}
+{"id":"r04","text":"A sample search for 'disk cleanup' returned eight events, including a commit and a related terminal session. No changes were made."}
+{"id":"r05","text":"We discussed whether to persist retrieval scores. The trade-off was noted, but no approach was selected."}
+{"id":"r06","text":"The old migration script is no longer used. We should probably delete its documentation after checking whether anyone still needs it."}
+{"id":"r07","text":"Done: changed the default model to the pinned release after the latency review. The review's measurements are recorded elsewhere."}
+{"id":"r08","text":"The timeout is 30 seconds now. I cannot tell from this note whether it was changed today or merely observed."}
+{"id":"r09","text":"Could the result ordering explain the missing citation? We tried sorting by score, but the next run still omitted it; investigation continues."}
+{"id":"r10","text":"Approved the smaller patch: keep the current retrieval path and change only the prompt wording. The patch itself has not been applied."}
