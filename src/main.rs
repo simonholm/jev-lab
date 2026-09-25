@@ -14,19 +14,19 @@ const ENDPOINT: &str = "https://openrouter.ai/api/alpha/decisions";
 const NOUL_QUESTIONS: [(&str, &str); 4] = [
     (
         "concrete_decision",
-        "Does this record contain a concrete decision that was actually made?",
+        "Does this record explicitly state that a decision, approval, rejection, or policy choice was made? Answer based only on what is explicitly documented. Do not count a decision merely implied by an implementation or other action.",
     ),
     (
         "completed_change",
-        "Does this record describe a completed change?",
+        "Does this record explicitly state that a project change was actually completed or applied? A proposal, approval, plan, investigation, intended change, or description of past behavior does not count unless the record states that the change was carried out.",
     ),
     (
         "project_history",
-        "Does this record contain information useful for reconstructing project history?",
+        "Would this record be worth retaining in a concise project history because it documents at least one of: an explicit decision, a completed project change, a significant problem and its resolution, a failed experiment that affected subsequent work, or a significant project result? Do not count transient status, routine command output, casual discussion, or mundane observations.",
     ),
     (
         "needs_context",
-        "Does this record require surrounding context to understand what happened?",
+        "Is important information missing from this record such that, by itself, a reader cannot identify what project event, change, problem, decision, or result the record refers to? Do not answer yes merely because additional background would be helpful.",
     ),
 ];
 
@@ -47,14 +47,14 @@ fn questions() -> Value {
     let mut questions = json!({
         "category": {
             "type": "choice",
-            "instructions": "What kind of record is this? Choose the best primary category for the record as written.",
+            "instructions": "Choose the category that best describes what this record itself documents, not an action or decision that can merely be inferred from it.\n\ndecision: explicitly records a choice, approval, rejection, or policy decision.\nimplementation: explicitly records work that was carried out or a change that was applied.\ntroubleshooting: primarily records diagnosis, investigation, debugging, or repair of a problem.\nobservation: primarily reports a fact, measurement, state, or result without documenting a decision or implementation.\ndiscussion: primarily records a proposal, suggestion, question, trade-off, or unresolved discussion.\nother: none of the above is the primary purpose.",
             "criteria": {
-                "decision": "An explicit choice or commitment among approaches, whether or not implemented.",
-                "implementation": "A completed code, configuration, or documentation change.",
-                "troubleshooting": "Investigation or resolution of a failure or unexpected behavior.",
-                "observation": "A finding, measurement, or status report without a decision or change.",
-                "discussion": "Open-ended consideration or proposal without a decision.",
-                "other": "The record does not fit the other categories."
+                "decision": "Explicitly records a choice, approval, rejection, or policy decision.",
+                "implementation": "Explicitly records work that was carried out or a change that was applied.",
+                "troubleshooting": "Primarily records diagnosis, investigation, debugging, or repair of a problem.",
+                "observation": "Primarily reports a fact, measurement, state, or result without documenting a decision or implementation.",
+                "discussion": "Primarily records a proposal, suggestion, question, trade-off, or unresolved discussion.",
+                "other": "None of the above is the primary purpose."
             }
         }
     });
@@ -108,7 +108,7 @@ fn run() -> Result<(), Box<dyn Error>> {
     };
     let root = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
     let records = BufReader::new(File::open(root.join("experiment2-records.jsonl"))?);
-    let mut output = BufWriter::new(File::create(root.join("experiment2-results.jsonl"))?);
+    let mut output = BufWriter::new(File::create(root.join("experiment3-results.jsonl"))?);
     let client = Client::builder().timeout(Duration::from_secs(30)).build()?;
     let questions = questions();
     let mut count = 0;
