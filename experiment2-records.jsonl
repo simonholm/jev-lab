@@ -1,0 +1,30 @@
+{"id":"r01","text":"Decision: keep OPENROUTER_API_KEY as an environment override; store the optional local credential in a CLI-owned file with restrictive permissions."}
+{"id":"r02","text":"Implemented source-qualified inspect routing. The CLI now accepts codex:42 and git:42 without treating their numeric IDs as interchangeable."}
+{"id":"r03","text":"The ask command returned a 401. The environment key was stale; after removing that override, the stored credential worked in a fresh run."}
+{"id":"r04","text":"A sample search for 'disk cleanup' returned eight events, including a commit and a related terminal session. No changes were made."}
+{"id":"r05","text":"We discussed whether to persist retrieval scores. The trade-off was noted, but no approach was selected."}
+{"id":"r06","text":"The old migration script is no longer used. We should probably delete its documentation after checking whether anyone still needs it."}
+{"id":"r07","text":"Done: changed the default model to the pinned release after the latency review. The review's measurements are recorded elsewhere."}
+{"id":"r08","text":"The timeout is 30 seconds now. I cannot tell from this note whether it was changed today or merely observed."}
+{"id":"r09","text":"Could the result ordering explain the missing citation? We tried sorting by score, but the next run still omitted it; investigation continues."}
+{"id":"r10","text":"Approved the smaller patch: keep the current retrieval path and change only the prompt wording. The patch itself has not been applied."}
+{"id":"r11","text":"Decision: cap each ask response at eight evidence records because larger sets buried the relevant commit in review. This limit applies to future queries."}
+{"id":"r12","text":"Implemented the eight-record evidence cap in the retrieval selector. A test with nine candidates now returns exactly eight."}
+{"id":"r13","text":"Proposal: raise the evidence cap to twelve next month if users request more context. Nobody approved it and no code changed."}
+{"id":"r14","text":"Citation IDs still disappear on the second query. We are testing cache invalidation as a possible cause; the cause and fix remain unknown."}
+{"id":"r15","text":"Fixed a 401 by removing an obsolete key loader from shell startup. A fresh login now authenticates through the CLI credential store."}
+{"id":"r16","text":"Until June 5, search grouped Git events by author timestamp rather than commit timestamp. Reports generated before that date may have incorrect day boundaries."}
+{"id":"r17","text":"At 14:03, cargo fmt finished without changing any files."}
+{"id":"r18","text":"Terminal output: /home/demo/projects/notes"}
+{"id":"r19","text":"CI job 418 is waiting for an available runner; no test result exists yet."}
+{"id":"r20","text":"Reversed the earlier decision to retain complete prompt text. After a privacy review, the new decision is to store only source IDs in the audit record."}
+{"id":"r21","text":"Experiment: boosting terminal events above commits hid seven relevant commits in twenty labeled queries. The boost was reverted; these failure measurements were kept."}
+{"id":"r22","text":"At lunch we wondered whether the CLI should have a mascot. Nobody chose one or opened a task."}
+{"id":"r23","text":"The patch landed. It fixes the issue from yesterday."}
+{"id":"r24","text":"A local search for 'disk-agent' returned three Git hits and two session hits. No action followed."}
+{"id":"r25","text":"2026-09-24T12:00:00Z DEBUG HTTP 200 17ms GET /health"}
+{"id":"r26","text":"The build is green right now, but deployment has not started."}
+{"id":"r27","text":"Changed the search CLI message from 'No events' to 'No matching events'; the documentation and test were updated in the same commit."}
+{"id":"r28","text":"We should change the search CLI message from 'No events' to 'No matching events' after copy review. No patch exists yet."}
+{"id":"r29","text":"After the index migration, six Git events were missing. Rebuilding the index restored all six, and the regression test now passes."}
+{"id":"r30","text":"The README lists Rust 1.98 as the minimum, but CI still uses 1.97. Compatibility has not been checked."}

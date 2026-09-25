@@ -107,8 +107,8 @@ fn run() -> Result<(), Box<dyn Error>> {
         }
     };
     let root = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
-    let records = BufReader::new(File::open(root.join("records.jsonl"))?);
-    let mut output = BufWriter::new(File::create(root.join("results.jsonl"))?);
+    let records = BufReader::new(File::open(root.join("experiment2-records.jsonl"))?);
+    let mut output = BufWriter::new(File::create(root.join("experiment2-results.jsonl"))?);
     let client = Client::builder().timeout(Duration::from_secs(30)).build()?;
     let questions = questions();
     let mut count = 0;
