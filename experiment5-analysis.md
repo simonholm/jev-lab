@@ -34,17 +34,52 @@ capture raw responses, and use new result files opened with `create_new`.
 
 ## Interrupted Jev run
 
-The first and only Experiment 5 model attempt targeted `e5-01` with
+The first Experiment 5 model attempt targeted `e5-01` with
 `typesafe/jev-1.13`. The request failed at transport level after about 0.0014 s:
 `error sending request for url (https://openrouter.ai/api/alpha/decisions)`.
 There was no HTTP status, response body, token count, cost, or model answer.
-The failure is preserved in `experiment5-jev-results.jsonl`; the command output
-is in `experiment5-jev-run.log`. The interactive shell also reported denied
-writes to its cache and completion dump, which may be related to the restricted
-execution environment. The exact network cause was not established.
+The failure is preserved locally in the ignored
+`experiment5-jev-attempt1-results.jsonl` (SHA-256
+`20abcf16cd2f1362cc8ccefaf4c13138f2dd51daad07d4357b99e0f12fa9c942`);
+the command output is in `experiment5-jev-run.log`. The interactive shell also
+reported denied writes to its cache and completion dump. Later probing showed
+that an in-sandbox request could not resolve `openrouter.ai`, while the same
+endpoint returned an HTTP response outside the network sandbox. The restricted
+network environment caused the transport failure; the cache warnings were
+incidental.
 
-Per the predeclared failure rule, no failed record was rerun, no gaps were
-filled, and Gemini was not called. There are zero completed records for either
-model, so category, binary-judgment, operational, and synthetic-versus-real
-comparisons cannot be reported from this attempt. The frozen labels remain
-unchanged.
+Per the predeclared failure rule, no failed record was rerun and no gaps were
+filled in attempt 1. Gemini was not called during that attempt.
+
+## Second execution attempt
+
+The frozen state was committed as `803ee3881a3ce33dc0d2348e52b624c8e7be72fe`
+and pushed before another model request. The first raw capture was retained under
+its attempt-specific filename. Attempt 2 ran outside the network sandbox, from
+`e5-01`, with the unchanged runner, rubric, model, record order, and labels.
+
+Jev completed all 61 records sequentially, with 61 distinct response IDs and no
+HTTP or model errors. Its captured IDs and texts match the frozen input in order.
+The runner reported 50,280 input tokens, $0.002111760 API cost, and 16.711 s
+full-run wall time; the raw responses also report 8,327 output tokens. The
+ignored Jev capture is `experiment5-jev-results.jsonl` (SHA-256
+`449fc8796e5e1acfcb7f5b54b1a567b47b06ab99c3c9ce0575a58a3dd0b0ae73`).
+
+Only after Jev completed did Gemini run, once, on the same ordered records. It
+validated responses for `e5-01` through `e5-07`. The eighth HTTP response was
+captured for `e5-08`, but its `finish_reason` was `error` and its answer ended in
+the middle of a JSON number (`"explicit_decision": 0.`). The runner stopped on
+the JSON parse error. There were seven valid Gemini answers, one invalid captured
+answer, and no requests for `e5-09` through `e5-61`. The ignored partial capture
+is `experiment5-gemini-results.jsonl` (SHA-256
+`96fe191894dce750ca2f5a1f14654c22436da158919f8887f0ff1c80f4913ea6`).
+No record was retried and the partial Gemini run was not resumed.
+
+The frozen manifest hashes still match every listed file, including the 61
+records and 61 human labels. Because Gemini did not complete, this is not a full
+paired comparison; category, four-judgment, disagreement, and synthetic-versus-real
+results are intentionally not reported from the partial run.
+
+Offline `cargo check --bins` and `cargo test` pass, as does `git diff --check`.
+`cargo fmt --check` reports formatting differences in the frozen Jev runner;
+that runner was left untouched to preserve its manifest hash.
