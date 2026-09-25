@@ -1,0 +1,23 @@
+{
+  "freeze_timestamp_utc": "2026-09-25T05:46:13.741856+00:00",
+  "baseline_head": "72513eed39365b447e1b2e54c960b09a8d1abb47",
+  "baseline_origin_main": "72513eed39365b447e1b2e54c960b09a8d1abb47",
+  "record_count": 61,
+  "models": [
+    "typesafe/jev-1.13",
+    "google/gemini-2.5-flash-lite"
+  ],
+  "files_sha256": {
+    "experiment5-build-dataset.py": "46700863ecaf4aae79387d335db5104add5d72ce74fecb9e0ee0c475cf3353e0",
+    "experiment5-records.jsonl": "61f0b7c2453dac02eb08811f257e78a49d1c45b45fc9f65d1f647bcd438cdce7",
+    "experiment5-expected.jsonl": "db5fbbe15143fc6f888e90537791c620d5093a0dd6dde7dff621e52116260813",
+    "src/bin/experiment5_jev.rs": "3919d51a5372aae19b73a8d8bc66519435de6236e1a1da5312014c6165ed4dda",
+    "src/bin/experiment5_gemini.rs": "6e5a7b4c333b362d2df2ad34bbfb870878b03f94a19834b084ad3664c8344494",
+    "src/main.rs": "3ce45ef1d630b7882d2ba07a19303951baaad647d0f85881ef547955af4a8c86",
+    "src/bin/experiment4.rs": "ed89aa7edb1659a78eed85465fbcfb3b25cc2fecce772036a7c1b97ad37f06fa",
+    "experiment3-expected.jsonl": "712ac22b0d526010d41a0dcdcf411c7a7e6ba2e0e5aea67c96d52eba020b12c3",
+    "experiment3-analysis.md": "81dc0dc2386bb4a7a7931cf440b5785333482bd2689d4fb27e7e40439798e5ec",
+    "experiment4-analysis.md": "86879328340ae4f2642e021c3c590f8d6a9f648973a88a2fafd2b6ba0fb9e53d"
+  },
+  "ordering": "Records and labels were frozen before any Experiment 5 model request; model runners read only record id and text, in file order."
+}
