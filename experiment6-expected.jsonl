@@ -1,0 +1,61 @@
+{"id":"e5-01","route":"KEEP","rationale":"A named retrieval capability was added and is clear enough for concise history."}
+{"id":"e5-02","route":"KEEP","rationale":"A specific temporal Git retrieval defect was fixed."}
+{"id":"e5-03","route":"KEEP","rationale":"The default model changed, a durable project behavior."}
+{"id":"e5-04","route":"KEEP","rationale":"Claude Code session ingestion was added as a substantial capability."}
+{"id":"e5-05","route":"KEEP","rationale":"The title identifies a completed fix to timeline answer framing."}
+{"id":"e5-06","route":"KEEP","rationale":"A named latest-state evidence fault was repaired."}
+{"id":"e5-07","route":"KEEP","rationale":"Snapshot timestamps were added, a clear durable capability."}
+{"id":"e5-08","route":"KEEP","rationale":"Retained application version detection was added."}
+{"id":"e5-09","route":"KEEP","rationale":"A specific hidden disk-growth defect was fixed."}
+{"id":"e5-10","route":"KEEP","rationale":"The completed Rust migration replaced the legacy CLI."}
+{"id":"e5-11","route":"DEEP_REVIEW","rationale":"A completed warning UX change is clear, but its significance for concise history is uncertain."}
+{"id":"e5-12","route":"KEEP","rationale":"Investigate became a live diagnostic, a substantive behavior change."}
+{"id":"e5-13","route":"DEEP_REVIEW","rationale":"Hiding empty targets is durable but may be too small for concise history."}
+{"id":"e5-14","route":"DEEP_REVIEW","rationale":"Hiding empty scan sections is durable but may be routine presentation cleanup."}
+{"id":"e5-15","route":"KEEP","rationale":"The target cleanup workflow was finalized."}
+{"id":"e5-16","route":"KEEP","rationale":"Pagination and inclusive end-date defects were fixed."}
+{"id":"e5-17","route":"KEEP","rationale":"Filtered job-ad ranges were added as a user capability."}
+{"id":"e5-18","route":"KEEP","rationale":"The initial JobTech fetcher established a project capability."}
+{"id":"e5-19","route":"KEEP","rationale":"A concrete Android recording ASR limitation was documented."}
+{"id":"e5-20","route":"KEEP","rationale":"An enhanced audio preprocessing variant was added."}
+{"id":"e5-21","route":"KEEP","rationale":"Real-device OCR and portability defects were repaired."}
+{"id":"e5-22","route":"DROP","rationale":"Removing temporary debug artifacts is routine cleanup."}
+{"id":"e5-23","route":"KEEP","rationale":"The Android wrapper gained a second recording location."}
+{"id":"e5-24","route":"KEEP","rationale":"Separating evidence from presentation is a substantive architecture change."}
+{"id":"e5-25","route":"DROP","rationale":"An initial scaffold alone gives too little useful project history."}
+{"id":"e5-26","route":"DEEP_REVIEW","rationale":"Mixed successful steps and empty transcripts may be a significant result, but the cause is absent."}
+{"id":"e5-27","route":"KEEP","rationale":"The recording audio cause and Whisper failure are documented concretely."}
+{"id":"e5-28","route":"DROP","rationale":"A bare file-detection check lacks a meaningful project result."}
+{"id":"e5-29","route":"DROP","rationale":"A bare extraction check lacks the surrounding investigation."}
+{"id":"e5-30","route":"DROP","rationale":"A bare invocation check has no substantive result."}
+{"id":"e5-31","route":"DROP","rationale":"A bare consistency check omits the relevant repository and concern."}
+{"id":"e5-32","route":"KEEP","rationale":"The screen-recording audio limitation is clear and useful."}
+{"id":"e5-33","route":"KEEP","rationale":"The excerpt states an explicit no-preprocessing choice and its reason."}
+{"id":"e5-34","route":"KEEP","rationale":"The development and synchronization policy is explicit and self-contained."}
+{"id":"e5-35","route":"DROP","rationale":"An unlabeled component inventory does not identify a dated project event."}
+{"id":"e5-36","route":"DEEP_REVIEW","rationale":"The OCR limitation may matter, but the excerpt gives no outcome or resolution."}
+{"id":"e5-37","route":"DROP","rationale":"A future validation task states no adopted change or result."}
+{"id":"e5-38","route":"KEEP","rationale":"Automatic deletion was explicitly deferred with a reason."}
+{"id":"e5-39","route":"KEEP","rationale":"A failed rewrite was abandoned, with a reason and preserved branch."}
+{"id":"e5-40","route":"DEEP_REVIEW","rationale":"Current lexical behavior motivates later work, but this excerpt alone states no result or change."}
+{"id":"e5-41","route":"KEEP","rationale":"Natural time questions and the lexical failure mechanism are explained."}
+{"id":"e5-42","route":"DEEP_REVIEW","rationale":"Zero-match measurements may matter, but the tested query is missing."}
+{"id":"e5-43","route":"KEEP","rationale":"Mandatory lexical terms are identified as the failure mechanism."}
+{"id":"e5-44","route":"DEEP_REVIEW","rationale":"A concrete retrieval planner proposal may matter if adopted, which the excerpt does not establish."}
+{"id":"e5-45","route":"DEEP_REVIEW","rationale":"Detailed planner boundaries may matter, but approval and implementation are unknown."}
+{"id":"e5-46","route":"DEEP_REVIEW","rationale":"The benchmark scope may be a consequential choice, but the excerpt only proposes it."}
+{"id":"e5-47","route":"DROP","rationale":"Proposed fixture locations are implementation detail with no adoption stated."}
+{"id":"e5-48","route":"DROP","rationale":"A JSON recommendation omits the case and any adoption decision."}
+{"id":"e5-49","route":"DROP","rationale":"An unexplained future matching recommendation is too fragmentary."}
+{"id":"e5-50","route":"DROP","rationale":"A proposed runner procedure does not report a decision or completed work."}
+{"id":"e5-51","route":"DROP","rationale":"Proposed Top-k criteria lack the benchmark context and adoption status."}
+{"id":"e5-52","route":"KEEP","rationale":"The session parser working rules are explicit project policy."}
+{"id":"e5-53","route":"DROP","rationale":"Unadopted planned improvements lack the surrounding project context."}
+{"id":"e5-54","route":"DEEP_REVIEW","rationale":"The implemented capability inventory may matter, but the project and timing are missing."}
+{"id":"e5-55","route":"DROP","rationale":"A dated inspection log gives no substantive result."}
+{"id":"e5-56","route":"KEEP","rationale":"The dated log identifies commands that were added."}
+{"id":"e5-57","route":"KEEP","rationale":"Structured extraction before AI is an explicit architecture principle."}
+{"id":"e5-58","route":"KEEP","rationale":"Rust-first implementation is an explicit technical policy."}
+{"id":"e5-59","route":"KEEP","rationale":"Local-first operation is an explicit project policy."}
+{"id":"e5-60","route":"KEEP","rationale":"Avoiding premature platform definition is an explicit design policy."}
+{"id":"e5-61","route":"DROP","rationale":"Future possibilities have no referent and are explicitly not a roadmap."}

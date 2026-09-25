@@ -1,0 +1,14 @@
+{
+  "freeze_timestamp_utc": "2026-09-25T06:59:17.731274+00:00",
+  "baseline_head": "5f1783b2fcaca80a5bb0faff1fa84c2566547db1",
+  "record_count": 61,
+  "source_records_sha256": "61f0b7c2453dac02eb08811f257e78a49d1c45b45fc9f65d1f647bcd438cdce7",
+  "source_labels_sha256": "db5fbbe15143fc6f888e90537791c620d5093a0dd6dde7dff621e52116260813",
+  "source_jev_capture_sha256": "449fc8796e5e1acfcb7f5b54b1a567b47b06ab99c3c9ce0575a58a3dd0b0ae73",
+  "files_sha256": {
+    "experiment6-expected.jsonl": "a2152090aa5e0ef65bf277efafa2e0ea828a03f94fcf56f9859aa42d8468d46f",
+    "experiment6-policy.py": "84a61c1108f5305a32cd8f1ec3128f54462a549a483c6ffbb971f21c4837f32c",
+    "experiment6-policy.md": "83b27545da1efe489d4ce620d3612a1c2e55302b331ae0565b4420cc1641b1d1"
+  },
+  "ordering": "Human routing labels and policy were written from original records, frozen human Experiment 5 labels, and prior experiment semantics before any Experiment 6 route calculation."
+}
